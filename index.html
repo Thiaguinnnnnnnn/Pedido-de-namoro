@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quer namorar comigo?</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+      color: #333;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    button {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .yes-btn {
+      background-color: #28a745;
+      color: white;
+    }
+    .yes-btn:hover {
+      background-color: #218838;
+    }
+    .no-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+    .no-btn:hover {
+      background-color: #c82333;
+    }
+    .heart {
+      font-size: 4rem;
+      color: #ff6f91;
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Quer namorar comigo? 💖</h1>
+    <button class="yes-btn" onclick="showLove()">Sim!</button>
+    <button class="no-btn" onclick="runAway(this)">Não...</button>
+    <div class="heart">Eu te amo minha tigresinha</div>
+  </div>
+
+  <script>
+    function showLove() {
+      const heart = document.querySelector('.heart');
+      heart.style.display = 'block';
+    }
+
+    function runAway(button) {
+      button.style.position = 'absolute';
+      button.style.top = Math.random() * (window.innerHeight - 50) + 'px';
+      button.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+    }
+  </script>
+</body>
+</html>
